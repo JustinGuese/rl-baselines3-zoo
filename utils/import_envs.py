@@ -1,4 +1,9 @@
 try:
+    import stocksenv  # pytype: disable=import-error
+except ImportError:
+    stocksenv = None
+
+try:
     import pybullet_envs  # pytype: disable=import-error
 except ImportError:
     pybullet_envs = None
